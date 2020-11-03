@@ -1,0 +1,23 @@
+{
+  "name": "hackaton-avanade",
+  "version": "1.0.0",
+  "description": "- A ideia é desenvolver uma API que atenda uma demanda de solicitar corridas particulares, \r onde há um cadastro prévio do cliente e do motorista.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valdir-ti/hackaton-avanade.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valdir-ti/hackaton-avanade/issues"
+  },
+  "homepage": "https://github.com/valdir-ti/hackaton-avanade#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
