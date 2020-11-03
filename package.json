@@ -4,7 +4,8 @@
   "description": "- A ideia é desenvolver uma API que atenda uma demanda de solicitar corridas particulares, \r onde há um cadastro prévio do cliente e do motorista.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon --ignore node_modules src/index.js"
   },
   "repository": {
     "type": "git",
