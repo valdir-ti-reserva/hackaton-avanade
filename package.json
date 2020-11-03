@@ -8,7 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/valdir-ti/hackaton-avanade.git"
+    "url": "git+https://github.com/valdir-ti/hackaton-avanade.git",
+    "dev": "npx nodemon --ignore node_modules src/index.js",
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,10 @@
   },
   "homepage": "https://github.com/valdir-ti/hackaton-avanade#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   }
 }
