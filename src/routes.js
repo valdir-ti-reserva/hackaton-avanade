@@ -4,6 +4,7 @@ const indexController = require("./controllers/homeController");
 const clienteController = require("./controllers/clienteController");
 const corridaController = require("./controllers/corridaController");
 const carroController = require("./controllers/carroController");
+const motoristaController = require("./controllers/motoristaController");
 
 
 const routes = Router();
@@ -27,5 +28,11 @@ routes.get("/carro", carroController.index);
 routes.post("/carro", carroController.created);
 routes.put("/carro", carroController.updated);
 routes.delete("/carro/:id", carroController.delete);
+
+//Sessão de motoristas
+routes.get("/motorista", motoristaController.index);
+routes.post("/motoristaCreate", motoristaController.create);
+routes.put("/motoristaUpdate", motoristaController.update);
+routes.delete("/motoristaDelete/:id", motoristaController.delete);
 
 module.exports = routes;

@@ -32,7 +32,12 @@ const Motorista = (sequelize, dataTypes) => {
       allowNull: false,
       type: dataTypes.DATE,
     },
-  });
+  })
+
+  model.associate = (models) => {
+    model.belongsTo(models.Carro, { foreignKey: "idCarro", as: "carros" });
+  };
+
   return model;
 };
 
