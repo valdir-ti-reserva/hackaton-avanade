@@ -1,24 +1,24 @@
-const { Sequelize } = require("sequelize/types");
+const sequelize = require("sequelize");
 
-const Corrida = (sequelize, datatypes) => {
+const Corrida = (sequelize, dataTypes) => {
   const model = sequelize.define(
     'Corrida',
     {
       id: {
         primaryKey: true,
         autoIncrement: true,
-        type: Sequelize.INTEGER,
+        type: dataTypes.INTEGER,
       },
       origem: {
-        type: Sequelize.STRING(300),
+        type: dataTypes.STRING(300),
         allowNull: false,
       },
       destino: {
-        type: Sequelize.STRING(300),
+        type: dataTypes.STRING(300),
         allowNull: false,
       },
       idUsuario: {
-        type: Sequelize.INTEGER, 
+        type: dataTypes.INTEGER, 
         references: { 
           model: 'clientes', 
           key: 'id' 
@@ -26,7 +26,7 @@ const Corrida = (sequelize, datatypes) => {
         allowNull: false 
       },
       idMotorista: {
-        type: Sequelize.INTEGER, 
+        type: dataTypes.INTEGER, 
         references: { 
           model: 'motoristas', 
           key: 'id' 
@@ -35,11 +35,11 @@ const Corrida = (sequelize, datatypes) => {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: dataTypes.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: dataTypes.DATE,
       },
     }
   )
