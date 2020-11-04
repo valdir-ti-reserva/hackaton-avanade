@@ -1,9 +1,9 @@
 const { Corrida } = require('../models');
 const corridaController = {
     async index(req, res) {
-        // const corridas = await Corrida.findAll();
+        const corridas = await Corrida.findAll();
         // return res.status(200).json(corridas);        
-        return res.status(200).json('Rota inicial');
+        return res.status(200).json(corridas);
     },    
     async created(req, res) {
         // const { name, email, telefone } = req.body;
