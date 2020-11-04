@@ -18,6 +18,7 @@ const motoristaController = {
       const newMotorista = await Motorista.create({
         name,
         email,
+        idCarro,
         telefone,
         createdAt: now,
         updatedAt: now,
@@ -34,7 +35,7 @@ const motoristaController = {
     const now = new Date();
     try {
       const updateMotorista = await Motorista.update(
-        { name, email, telefone, createdAt: now, updatedAt: now },
+        { name, email, idCarro, telefone, createdAt: now, updatedAt: now },
         { where: { id } }
       );
 
