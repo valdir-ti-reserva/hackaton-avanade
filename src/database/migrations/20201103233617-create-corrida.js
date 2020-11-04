@@ -16,6 +16,10 @@ module.exports = {
         type: Sequelize.STRING(300),
         allowNull: false,
       },
+      estado: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       idUsuario: {
         type: Sequelize.INTEGER, 
         references: { 
