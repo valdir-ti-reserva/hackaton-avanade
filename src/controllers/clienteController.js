@@ -3,7 +3,7 @@ const clienteController = {
     async index(req, res) {
         const clientes = await Cliente.findAll();
 
-        return res.status(200).json("Rota de clientes!", clientes)
+        return res.status(200).json(clientes)
     },
     async details(req, res){
         const { id } = req.body
