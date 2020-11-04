@@ -16,23 +16,7 @@ const Corrida = (sequelize, dataTypes) => {
       destino: {
         type: dataTypes.STRING(300),
         allowNull: false,
-      },
-      idUsuario: {
-        type: dataTypes.INTEGER, 
-        references: { 
-          model: 'clientes', 
-          key: 'id' 
-        }, 
-        allowNull: false 
-      },
-      idMotorista: {
-        type: dataTypes.INTEGER, 
-        references: { 
-          model: 'motoristas', 
-          key: 'id' 
-        }, 
-        allowNull: false 
-      },
+      },      
       createdAt: {
         allowNull: false,
         type: dataTypes.DATE,
@@ -43,6 +27,18 @@ const Corrida = (sequelize, dataTypes) => {
       },
     }
   )
+  
+  model.associate = (models) => { 
+    model.belongsTo(models.Cliente, {
+      foreignKey:'idUsuario', 
+      as:'cliente'
+    }); 
+      
+    model.belongsTo(models.Motorista, {
+      foreignKey:'idMotorista',
+      as: 'motorista'
+    });
+  } 
 
   return model;
 }
