@@ -2,8 +2,7 @@ const { Carro } = require('../models/Carro');
 const carroController = {
     async index(req, res) {
         const carros = await Carro.findAll();
-
-        return res.status(200).json("Rota de carros", carros)
+        return res.status(200).json(carros)
     },
     async details(req, res){
         const { id } = req.body
